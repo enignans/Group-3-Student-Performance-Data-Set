@@ -15,11 +15,11 @@ First, we added the required libraries before beginning our analysis. In the cod
 
 To choose our predictors we know that, since we are predicting a quantitative variable, we must select all numeric variables. Then using cor(), we got the correlation coefficients for those variables with G3 and we chose the ones with the highest correlation coefficient with G3, our predicted variable, as these would offer the best prediction. Those with the highest correlation were G1 and G2. We then showed the correlation and linear relation for those variables with G3 using the ggpairs function.
 
-*SELECT AND USE GGPAIRS
+*SELECT AND USE GGPAIRS*
 
 The variables we will be using as predictors are G1 and G2 which are the grades for the first and second periods respectively, with values ranging from 0 to 20. We chose these variables as we believe they most concisely offer a representation of a student’s success in the classroom as well as they were good predictors due to their high correlation with G3. These variables could also be found with minimal effort, as previous grades would be recorded, therefore not requiring any additional effort to collect.
 
-*SUMMARY STATISTICS*
+*SUMMARY STATISTICS - ANSWERING EXPLORATORY QUESTIONS*
 
 We then set our seed so that our results are reproducible and then we divided our data into training and testing portions with a 75/25 split. We then calculated then mean and median for all 3 variables in the training data and aggregated them into a tidy table. 
 In the training data set, we observe:

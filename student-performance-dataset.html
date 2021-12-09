@@ -14370,7 +14370,7 @@ Warning message:
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Reading the file:</p>
-<p>The dataset is available as a zip file on the web. Thus, we have downloaded it as a zip file and used the unzip function to obtain the individual files. The file we are interested in is student-por.csv. We have read this file using read_delim function rather than using read_csv because the observations for different variables are separated by a semicolon rather than comma(the usual format for .csv files). Next, we count the number of rows in the entire data frame before and after filtering for missing values (649). We can see that the number of rows did not change, therefore we can conclude that there are no missing observations. We then display the first 6 rows of the data, which, as we can see, contains 33 variables.</p>
+<p>The dataset is available as a zip file on the web. Thus, we have downloaded it as a zip file and used the unzip function to obtain the individual files. The file we are interested in is student-por.csv. We have read this file using read_delim function rather than using read_csv because the observations for different variables are separated by a semicolon rather than comma(the usual format for .csv files). Next, we count the number of rows in the entire data frame, before and after, filtering for missing values. We can see that the number of rows(649) did not change, therefore we can conclude that there are no missing observations. We then display the first 6 rows of the data, which, as we can see, contains 33 variables.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15337,10 +15337,10 @@ height=420
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Summary Statistics - Answering Exploratory Questions</p>
-<p>We set our seed so that our results are reproducible and then we divided our data into training and testing portions with a 75/25 split to allow for the tuning and evaluation of our model. We then calculated the mean and median for all 3 variables in the training data and aggregated them into a tidy table, as this would give us an idea of how differently the variables are distributed. 
-In the training data set, we observe:
-•   There are 488 observations
-•   There are no missing observations (as previously determined) and the data set is in a tidy format 
+<p>We set our seed so that our results are reproducible and then we divided our data into training and testing portions with a 75/25 split to allow for the tuning and evaluation of our model. We then calculated the mean and median for all 3 variables in the training data and aggregated them into a tidy table, as this would give us an idea of how differently the variables are distributed. <br>
+In the training data set, we observe:<br>
+•   There are 488 observations<br>
+•   There are no missing observations (as previously determined) and the data set is in a tidy format<br> 
 •   The means and medians slightly increase across grading periods</p>
 
 </div>
@@ -16026,7 +16026,7 @@ height=300
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Planning the analysis:</p>
-<p>We will conduct our analysis using a multivariable k-nearest neighbors regression model as it requires few assumptions as to what our data must look like and is unaffected by collinearity. We will also use 10-fold cross-validation to choose the number of neighbors to minimize the RMSPE of our model and to limit the effects of random chance. We will visualize the results of our k-nearest neighbors regression model by creating a plot that visualizes the relationship between G3 with G1 and G2 along with a regression line. We expect to find that there is a strong positive relationship between final grades with G1 and G2. We also expect the predicted final grades to be relatively close to the actual final grades due to the high correlation between the variables.</p>
+<p>We will conduct our analysis using a multivariable k-nearest neighbors regression model as it requires few assumptions as to what our data must look like and is unaffected by collinearity. We will also use 10-fold cross-validation to choose the number of neighbors to minimize the RMSE of our model and to limit the effects of random chance. We will visualize the results of our k-nearest neighbors regression model by creating a plot that visualizes the relationship between G3 with G1 and G2 along with a regression line. We expect to find that there is a strong positive relationship between final grades with G1 and G2. We also expect the predicted final grades to be relatively close to the actual final grades due to the high correlation between the variables.</p>
 
 </div>
 </div>
@@ -16741,7 +16741,7 @@ Best k: 8</pre>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Analyzing the effectiveness of our model:</p>
-<p>Firstly, through the building and tuning of our model, we found that the number of neighbors which minimized our mean-squared error was 8. Building and evaluating a model with this parameter and evaluating it using our testing data netted a RMSE of 1.04 compared to that of 1.41 from the testing data, which indicates that it actually did better on our testing data than the training data. This value of 1.04 corresponds to the predicted error of the model when testing on new data, on the scale of the score (out of 20) for the final grade. This more or less aligned with what we had originally expected, as a predicted error of 1 (on a scale of 20) is fairly reliable, although we did not expect to see that large of a change between the RMSE and RMSPE.</p>
+<p>Firstly, through the building and tuning of our model, we found that the number of neighbors which minimized our mean-squared error was 8. Building and evaluating a model with this parameter and evaluating it using our testing data netted a RMSPE of 1.04 compared to that of 1.41 from the training data, which indicates that it actually did better on our testing data than the training data. This value of 1.04 corresponds to the predicted error of the model when testing on new data, on the scale of the score (out of 20) for the final grade. This more or less aligned with what we had originally expected, as a predicted error of 1 (on a scale of 20) is fairly reliable.</p>
 
 </div>
 </div>
